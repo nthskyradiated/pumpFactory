@@ -8,8 +8,6 @@ const { title } = Astro.props;
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import Hamburger from '../components/Hamburger.astro';
-import '@fontsource-variable/sora'
-import _variables from '../styles/_variables.scss'
 
 ---
 
@@ -19,34 +17,55 @@ import _variables from '../styles/_variables.scss'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Code and Y Website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg" href="/favicon.svg" />
+		<link rel="icon" type="image/svg" href="../../public/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<script is:inline src="https://kit.fontawesome.com/72852e9073.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 
 		</head>
 	<body>
-		<Header title='Pump Factory' subtitle= "embrace the PUMP" />
+		<Header title={'Debug the Mind Journals'} subtitle={'Wait... You blog?!'} />
 		<Hamburger />
-		<slot />
+		<div class="container">
+			<slot />
+		</div>
 		<Footer />
 
 	</body>
+
 </html>
 <script>
 	import '../scripts/hamburger.js'
-</script>
-<style is:global lang="scss">
+  </script>
+<style is:global>
+
+	:root {
+		--accent: 120, 164, 171;
+		--accent-light: 176, 199, 202;
+		--accent-dark: 233, 236, 231;
+		/* --accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 10%,
+			dimgray 75% */
+		);
+	}
+
 	*,*::before, *::after {
 		box-sizing: border-box; 
 		margin: 0; 
 		padding: 0;
 	}
 	html {
-		font-family: 'Sora variable', sans-serif;
-		background: #000;
+		font-family: 'segoe UI', 'Ubuntu-mono', sans-serif;
+		background: #e9ecee;
 		color: #333;
-		width: auto;
+	}
+
+	.container {
+		width: 75%;
+		margin: 64px auto;
+		line-height: 2.5em;
 		align-items: center;
 	}
 
@@ -54,5 +73,9 @@ import _variables from '../styles/_variables.scss'
 .stop-scrolling {
     overflow: hidden;
 }
+	code {
+		font-family: sans-serif;
+	}
+
 
 </style>

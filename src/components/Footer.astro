@@ -1,0 +1,87 @@
+---
+
+---
+
+<footer>
+    <div class="footer">
+
+        <span>Copyright &copy; 2023 All Rights Reserved</span>
+        <div class="socials">
+        <ul>
+            <li><a href="https://www.facebook.com/thepumpfactoryiloilo" target="blank"><i class="fa-brands fa-facebook icons"></i></a></li>
+            <li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><i class="fa-brands fa-instagram icons"></i></a></li>
+        </ul>
+    </div>
+    </div>
+
+</footer>
+
+<style lang="scss">
+    footer {
+        background-color: midnightblue;
+        width: 100%;
+        padding: 8px 0;
+        justify-content: space-between;
+
+    }
+    .footer {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer span {
+
+        color: whitesmoke;
+
+    }
+    .socials {
+        margin:  16px 0;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        height: auto;
+    }
+    li {
+        list-style: none;
+        margin-right: 32px;
+    }
+    a {
+        color: whitesmoke;
+        font-size: x-large;
+     }
+     a:hover {
+        opacity: .65;
+    }
+
+
+     @media (max-width: 768px) {
+        footer {
+            width: auto;
+        }
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        span, .socials ul li{
+        margin: 0 16px;
+        justify-content: center;
+        align-items: left;
+        text-align: center;
+    }
+
+    li {
+        list-style: none;
+        margin-right: 1px;
+    }
+     }
+     
+</style>

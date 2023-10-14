@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+    title: string
+    body?: string
+    hasImage?: boolean
+    image?: ImageMetadata
+}
+const { title, body, hasImage = false, image } = Astro.props
+const noImg = 'noImg'
+---
+
+<section class="section-wrapper">
+    <div class= {!hasImage as string && noImg } >
+        <div class="image-wrapper">
+            {hasImage && <Image class="img" src={image as ImageMetadata} alt=""/>}
+        </div>
+        <div class= "container">
+            <h1>{title}</h1>
+            <span>{body}</span>
+        </div>    
+    </div>
+</section>
+
+<style lang="scss">
+    .section-wrapper {
+        margin: 8% 0;
+        width: auto;
+        position: relative;
+    }
+    .image-wrapper {
+        margin: inherit;
+        margin-bottom: -32px;
+    }
+    .noImg {
+        height: 200px;
+        position: relative;
+    }
+    
+    .img {
+        height: auto;
+        width: 100%;
+        
+    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        align-items: center;
+        padding-bottom:24px;
+        text-align: center;
+        color: steelblue;
+        line-height: 3.2rem;
+    }
+
+    h1 {
+        /* text-transform: uppercase; */
+        font-size: 48px;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 32px;
+        }
+
+
+    }
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 32px;
+
+
+        }
+        span {
+            display: none
+        }
+
+    }
+</style>

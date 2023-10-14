@@ -1,46 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LinkCard from '../components/LinkCard.astro';
 import Card from '../components/Card.astro';
 import pf1 from '../images/pf1.jpg'
-import pf2 from '../images/pf2.jpg'
 ---
 
 <Layout title="Welcome to Pump Factory">
 	<main>
-
-		<h1>Welcome to the <span class="text-gradient">Pump Factory</span></h1>
-		<section class="container">
-			<Card src={pf1} alt='some string'/>
-			<h2 class="section-headline">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-			
-		</section>
-		<section class="container2">
-			<Card src={pf2} alt='some string'/>
-			<div>
-				<h2 class="section-headline">Lorem ipsum dolor, sit amet!!</h2>
-				
-				<ul role="list" class="link-card-grid">
-					<LinkCard
-						href="https://docs.astro.build/"
-						title="Browse through our services"
-						body="lorem ipsum dolor, sit amet"
-					/>
-					<LinkCard
-						href="https://astro.build/integrations/"
-						title="FAQ"
-						body="Supercharge your project with new frameworks and libraries."
-					/>
-					<LinkCard
-						href="https://astro.build/integrations/"
-						title="Registration Details"
-						body="lorem ipsum dolor, sit amet lorem ipsum dolor, sit amet"
-					/>
-			</div>
-		</section>
+<h1>this is the about page</h1>
+<h3>still under construction</h3>
 
 
-		</ul>
 	</main>
 </Layout>
 
@@ -68,7 +37,7 @@ import pf2 from '../images/pf2.jpg'
 		height: auto;
 		z-index: -1;
 	}
-	h1 {
+	h1, h3{
 		font-size: 4rem;
 		font-weight: 700;
 		line-height: 1;

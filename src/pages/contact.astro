@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LinkCard from '../components/LinkCard.astro';
+import Card from '../components/Card.astro';
+import pf1 from '../images/pf1.jpg'
+import pf2 from '../images/pf2.jpg'
+---
+
+<Layout title="Welcome to Pump Factory">
+	<main>
+<h1>this is the contact page</h1>
+<h3>still under construction</h3>
+
+
+	</main>
+</Layout>
+
+<style lang="scss">
+@import '../styles/_variables.scss';
+
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 90%;
+		max-width: calc(100% - 2rem);
+		color: white;
+		background-image: url(../images/logo.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		// font-size: 20px;
+		line-height: 1.6;
+	}
+
+	h1, h3{
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+
+	
+</style>
