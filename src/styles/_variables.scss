@@ -1,9 +1,9 @@
 @use 'sass:list';
-$accent: rgb(120, 164, 171);
+$accent: midnightblue;
 $accent-light: rgb(176, 199, 202);
-$accent-dark: rgb(233, 236, 231, 8%);
+$accent-dark: dimgray;
 $colors: $accent-dark $accent $accent-light;
-$direction: 45deg;
+$direction: -60deg;
 // $accent-gradient: linear-gradient(
 //     45deg,
 //     rgb $accent,

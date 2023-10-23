@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LinkCard from '../components/LinkCard.astro';
 import Card from '../components/Card.astro';
+import Card2 from '../components/Card2.astro';
 import pf1 from '../images/pf1.jpg'
 import pf2 from '../images/pf2.jpg'
 import pf3 from '../images/pf3.jpg'
@@ -10,7 +11,9 @@ import Hero from '../components/Hero.astro';
 
 <Layout title="Welcome to Pump Factory">
 	<main>
-		<Hero title='Welcome to the ' subtitle='PumpFactory' hasImage=true image={pf3} alt="" />
+		<Card2>
+			<Hero title='Welcome to ' subtitle='PumpFactory' hasImage=true image={pf3} alt="" />
+		</Card2>
 		<section class="container">
 			<Card src={pf1} alt='some string'/>
 			<h2 class="section-headline">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
@@ -23,17 +26,17 @@ import Hero from '../components/Hero.astro';
 				
 				<ul role="list" class="link-card-grid">
 					<LinkCard
-						href="https://docs.astro.build/"
+						href="#"
 						title="Browse through our services"
 						body="lorem ipsum dolor, sit amet"
 					/>
 					<LinkCard
-						href="https://astro.build/integrations/"
+						href="#"
 						title="FAQ"
 						body="Supercharge your project with new frameworks and libraries."
 					/>
 					<LinkCard
-						href="https://astro.build/integrations/"
+						href="#"
 						title="Registration Details"
 						body="lorem ipsum dolor, sit amet lorem ipsum dolor, sit amet"
 					/>
@@ -51,7 +54,7 @@ import Hero from '../components/Hero.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 90%;
+		width: 80%;
 		max-width: calc(100% - 2rem);
 		color: white;
 		// font-size: 20px;
