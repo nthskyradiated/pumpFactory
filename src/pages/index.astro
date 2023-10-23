@@ -4,12 +4,13 @@ import LinkCard from '../components/LinkCard.astro';
 import Card from '../components/Card.astro';
 import pf1 from '../images/pf1.jpg'
 import pf2 from '../images/pf2.jpg'
+import pf3 from '../images/pf3.jpg'
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="Welcome to Pump Factory">
 	<main>
-
-		<h1>Welcome to the <span class="text-gradient">Pump Factory</span></h1>
+		<Hero title='Welcome to the ' subtitle='PumpFactory' hasImage=true image={pf3} alt="" />
 		<section class="container">
 			<Card src={pf1} alt='some string'/>
 			<h2 class="section-headline">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
@@ -53,30 +54,8 @@ import pf2 from '../images/pf2.jpg'
 		width: 90%;
 		max-width: calc(100% - 2rem);
 		color: white;
-		background-image: url(../images/logo.svg);
-		background-repeat: no-repeat;
-		background-size: cover;
 		// font-size: 20px;
 		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		@include  text-gradient($direction, $colors);
 	}
 
 	.container {

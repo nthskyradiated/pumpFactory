@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import _variables from '../styles/_variables.scss'
+
+---
+
+
+<div class="hero-container">
+<slot />
+</div>
+<style lang="scss">
+	@import '../styles/_variables.scss';
+	.hero-container {
+	margin-bottom: 1rem;
+	border: 1px transparent rgba($accent-light, 80%);
+	background: linear-gradient($accent-dark, rgba($accent, 25%));
+	// padding: 1rem;
+	border-radius: 8px;
+	width: auto;
+    height: 100%
+	}
+
+	
+	@media (max-width: 1024px) {
+		.hero-container {
+			width: auto;
+		}
+	}
+
+</style>
