@@ -22,7 +22,9 @@
     </nav>
 
 <style lang="scss">
-    @import'../styles/_variables.scss';
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
 
 .hamburger {
     position: fixed;

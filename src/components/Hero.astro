@@ -25,7 +25,10 @@ const noImg = 'noImg'
 </section>
 
 <style lang="scss">
-    @import '../styles/_variables.scss';
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+    
     .section-wrapper {
         margin: 8%;
         width: auto;
@@ -62,13 +65,13 @@ const noImg = 'noImg'
 
 	h1 {
 		font-size: 4rem;
-		font-weight: 700;
+		font-weight: bolder;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
 	}
 	.text-gradient {
-		@include  text-gradient($direction, $colors);
+		@include text-gradient($direction, $colors);
 	}
 
     @media (max-width: 768px) {

@@ -1,7 +1,19 @@
 @use 'sass:list';
-$accent: midnightblue;
-$accent-light: rgb(176, 199, 202);
-$accent-dark: dimgray;
+$bg-primary-color: #42414d;
+$bg-secondary-color: #f6f8fc;
+$txt-primary-color: #f1f1f1;
+$txt-secondary-color: #0f0f0f;
+
+$theme-color-1: #fec979;
+$theme-color-2: #ff8389;
+$theme-color-3: #f1379a;
+$theme-color-4: #567d9a;
+$theme-color-5: #452286;
+$theme-color-6: #ef5f75;
+
+$accent: $theme-color-6;
+$accent-light: $theme-color-2;
+$accent-dark: $theme-color-5;
 $colors: $accent-dark $accent $accent-light;
 $direction: -60deg;
 // $accent-gradient: linear-gradient(
@@ -10,16 +22,3 @@ $direction: -60deg;
 //     rgb $accent-light 10%,
 //     red 58%
 // );
-
-@mixin text-gradient($direction, $colors) {
-    $list: ();
-    @for $i from 1 through length($colors) {
-      $list: append($list, nth($colors, $i), comma);
-    }
-        
-    background: linear-gradient($direction, $list);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }

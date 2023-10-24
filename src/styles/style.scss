@@ -1,0 +1,40 @@
+@forward './mixins';
+@use './variables';
+
+*,*::before, *::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+html {
+    font-family: 'Sora variable', sans-serif;
+    background: #000;
+    color: #333;
+    width: auto;
+    align-items: center;
+}
+body {
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 64px;
+    position: relative;
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+    main {
+        padding: auto;
+        margin: 0 10%;
+        width: 75%;
+        line-height: 2em;
+        margin-bottom: 64px;
+    }
+    
+}
+
+/* stop body scrolling */
+.stop-scrolling {
+overflow: hidden;
+}

@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LinkCard from '../components/LinkCard.astro';
 import Card2 from '../components/Card2.astro';
 import pf5 from '../images/pf5.jpg'
 import Hero from '../components/Hero.astro';
-
+import { Icon } from 'astro-iconify'
 ---
 
 <Layout title="Welcome to Pump Factory">
@@ -81,19 +80,34 @@ import Hero from '../components/Hero.astro';
 			  </form>
 			</div>
 		</div>
-		<div>
-
+		<div class="divider">
+			<h1>OR</h1>
+		</div>
+		<div class="social-contact">
+			<ul class="social-list">
+				<li><a href="https://www.facebook.com/thepumpfactoryiloilo" target="blank"><Icon name="bxl:facebook-circle" />facebook.com/thepumpfactoryiloilo</a></li>
+            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:instagram" />instagram.com/thepumpfactoryiloilo</a></li>
+            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:whatsapp" />thepumpfactoryiloilo</a></li>
+			</ul>
 		</div>
 	</main>
 </Layout>
-<style>
+<style lang="scss">
+	@use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-	@import '../styles/_variables.scss';
 
 	main {
+		margin: 24px auto;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-evenly;
+		align-items: center;
+		
+		h1 {
+			color: $txt-primary-color;
+		}
 	}
 	.formbold-main-wrapper {
 	  display: flex;
@@ -129,7 +143,7 @@ import Hero from '../components/Hero.astro';
 	  padding-bottom: 10px;
 	  border: none;
 	  border-bottom: 1px solid #DDE3EC;
-	  background: #FFFFFF;
+	  background: $bg-secondary-color;
 	  opacity: .75;
 	  font-weight: 500;
 	  font-size: 16px;
@@ -204,4 +218,34 @@ import Hero from '../components/Hero.astro';
 	  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 	}
   
+	.social-contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: left;
+		li {
+			list-style: none;
+			margin: 8px;
+			svg {
+                height: 32px;
+				padding-right: 16px;
+				margin-top: 4px;
+				margin-bottom: -12px;
+            }
+		}
+		a {
+            color: $txt-primary-color;
+            font-size: x-large;
+         }
+         a:hover {
+            opacity: .65;
+        }
+	}
+
+	@media (max-width: 768px) {
+		main {
+		display: flex;
+		flex-direction: column;
+	}
+	}
   </style>

@@ -1,5 +1,5 @@
 ---
-
+import { Icon } from 'astro-iconify'
 ---
 
 <footer>
@@ -8,8 +8,8 @@
         <span>Copyright &copy; 2023 All Rights Reserved</span>
         <div class="socials">
         <ul>
-            <li><a href="https://www.facebook.com/thepumpfactoryiloilo" target="blank"><i class="fa-brands fa-facebook icons"></i></a></li>
-            <li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><i class="fa-brands fa-instagram icons"></i></a></li>
+            <li><a href="https://www.facebook.com/thepumpfactoryiloilo" target="blank"><Icon name="bxl:facebook-circle" /></a></li>
+            <li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:instagram" /></a></li>
         </ul>
     </div>
     </div>
@@ -17,8 +17,12 @@
 </footer>
 
 <style lang="scss">
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+
     footer {
-        background-color: midnightblue;
+        background-color: $theme-color-5;
         width: 100%;
         padding: 8px 0;
         justify-content: space-between;
@@ -31,12 +35,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        
+        span {
+            color: $txt-primary-color;
+        }
     }
-    .footer span {
 
-        color: whitesmoke;
-
-    }
     .socials {
         margin:  16px 0;
         justify-content: center;
@@ -47,41 +51,41 @@
         flex-direction: row;
         align-items: flex-end;
         height: auto;
-    }
-    li {
-        list-style: none;
-        margin-right: 32px;
-    }
-    a {
-        color: whitesmoke;
-        font-size: x-large;
-     }
-     a:hover {
-        opacity: .65;
+
+        li {
+            list-style: none;
+            margin-right: 32px;
+            svg {
+                height: 24px;
+                bottom: 12px;
+            }
+        }
+        a {
+            color: $txt-primary-color;
+            font-size: x-large;
+            &:hover {
+               opacity: .65;
+           }
+         }
     }
 
 
      @media (max-width: 768px) {
-        footer {
-            width: auto;
-        }
+
         .footer {
             display: flex;
             flex-direction: column;
             align-items: center;
 
+            span, .socials ul li{
+                margin: 0 16px;
+                justify-content: center;
+                align-items: left;
+                text-align: center;
+                list-style: none;
+                margin-right: 1px;
+            }
         }
-        span, .socials ul li{
-        margin: 0 16px;
-        justify-content: center;
-        align-items: left;
-        text-align: center;
-    }
-
-    li {
-        list-style: none;
-        margin-right: 1px;
-    }
      }
      
 </style>
