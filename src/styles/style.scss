@@ -1,5 +1,5 @@
 @forward './mixins';
-@use './variables';
+@use './variables' as *;
 
 *,*::before, *::after {
     box-sizing: border-box; 
@@ -14,7 +14,7 @@ html {
     align-items: center;
 }
 body {
-    background-image: url(../images/logo.svg);
+    background: url(../images/logo.svg), linear-gradient(-$direction, rgba( $theme-color-4, .5), rgba( $theme-color-1, .1), rgba( $theme-color-5, .5));
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -27,7 +27,7 @@ body {
     main {
         padding: auto;
         margin: 0 10%;
-        width: 75%;
+        width: auto;
         line-height: 2em;
         margin-bottom: 64px;
     }

@@ -22,6 +22,7 @@ import { Icon } from 'astro-iconify'
     @use '../styles/mixins' as *;
 
     footer {
+        @include linear-gradient;
         background-color: $theme-color-5;
         width: 100%;
         padding: 8px 0;
@@ -64,7 +65,9 @@ import { Icon } from 'astro-iconify'
             color: $txt-primary-color;
             font-size: x-large;
             &:hover {
-               opacity: .65;
+                opacity: .5;
+            // @include  text-gradient($direction, red);
+            transition: .7s ease-in-out;
            }
          }
     }

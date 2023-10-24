@@ -10,10 +10,10 @@ import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="Welcome to Pump Factory">
+	<Card2>
+		<Hero title='Welcome to ' subtitle='PumpFactory' hasImage={true} image={pf3 as any} alt={'gym photo'} />
+	</Card2>
 	<main>
-		<Card2>
-			<Hero title='Welcome to ' subtitle='PumpFactory' hasImage=true image={pf3} alt="" />
-		</Card2>
 		<section class="container">
 			<Card src={pf1} alt='some string'/>
 			<h2 class="section-headline">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
@@ -21,7 +21,7 @@ import Hero from '../components/Hero.astro';
 		</section>
 		<section class="container2">
 			<Card src={pf2} alt='some string'/>
-			<div>
+			<div class='card-list'>
 				<h2 class="section-headline">Lorem ipsum dolor, sit amet!!</h2>
 				
 				<ul role="list" class="link-card-grid">
@@ -54,8 +54,8 @@ import Hero from '../components/Hero.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 80%;
-		max-width: calc(100% - 2rem);
+		width: 100%;
+		max-width: calc(100% - 1rem);
 		color: white;
 		// font-size: 20px;
 		line-height: 1.6;
@@ -71,33 +71,33 @@ import Hero from '../components/Hero.astro';
 		margin-bottom: 5%;
 
 		.section-headline {
-			font-size: 3rem;
+			font-size: 2rem;
 			font-weight: 500;
-			line-height: 5.5rem;
-			width: 50%
+			line-height: 5rem;
+			width: 70%
 		}
 	}
 	.container2 {
 		display: flex;
 		flex-direction: row-reverse;
-		width: auto;
+		width: 100%;
 		justify-content: center;
 		flex-shrink: 3;
 		gap: 5rem;
 
-		div {
+		.card-list {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			width: auto;
-			gap: .5rem;
+			gap: .3rem;
 			height: 100%;
 			
 			.section-headline {
 				font-size: 2rem;
 				font-weight: 500;
 				text-align: center;
-				line-height: 100%;
+				line-height: 24px;
 				margin: none;
 				width: 100%
 			}
@@ -107,7 +107,7 @@ import Hero from '../components/Hero.astro';
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
+		gap: .5rem;
 		padding: 0;
 	}
 
