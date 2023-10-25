@@ -1,29 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import _variables from '../styles/_variables.scss'
 
 ---
 
 
-<div class="hero-container">
+<div class="card2-container">
 <slot />
 </div>
+
 <style lang="scss">
-	@import '../styles/_variables.scss';
-	.hero-container {
-	margin-bottom: 1rem;
-	margin: 0 auto;
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+	.card2-container {
 	border: 1px transparent rgba($accent-light, 80%);
 	background: linear-gradient($accent-dark, rgba($accent, 25%));
-	padding: .5px;
 	border-radius: 8px;
-	// width: 70%;
-    height: 75%;
+	padding: 8px;
 	}
 
 	
 	@media (max-width: 1024px) {
-		.hero-container {
+		.card2-container {
 			width: auto;
 		}
 	}

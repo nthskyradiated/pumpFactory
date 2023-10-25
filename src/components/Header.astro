@@ -40,7 +40,7 @@ const { title, subtitle} = Astro.props
     header {
         background: inherit;
         width: 100%;
-        padding-bottom: 8px;
+        padding-bottom: 16px;
 
     }
     .container {
@@ -65,8 +65,7 @@ const { title, subtitle} = Astro.props
         padding: 32px 0;
         flex-direction: column;
         text-align: left;
-        color: whitesmoke
-
+        color: $txt-primary-color;
     }
     img{
     width: 120px;
@@ -78,28 +77,27 @@ const { title, subtitle} = Astro.props
     ul{
         display: flex;
         flex-direction: row;
-
+        li {
+            list-style: none;
+            text-align: center;
+            align-items: bottom;
+            padding-right: 32px;
+            
+        }
+        a, a:visited{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: x-large;
+            color: $txt-primary-color;
+            &:hover {
+                opacity: .65;
+                @include  text-gradient($direction, $colors);
+                transition: .4s ease-in-out;
+            }
+        }
     }
     
-    li {
-        list-style: none;
-        text-align: center;
-        align-items: bottom;
-        padding-right: 32px;
-        
-    }
-    a, a:visited{
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: x-large;
-        color: whitesmoke;
-    }
 
-    a:hover {
-        opacity: .65;
-        @include  text-gradient($direction, $colors);
-        transition: .4s ease-in-out;
-    }
 
     @media (max-width: 768px) {
         nav {

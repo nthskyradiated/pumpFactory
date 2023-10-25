@@ -8,10 +8,9 @@
 }
 html {
     font-family: 'Sora variable', sans-serif;
-    background: #000;
+    background: $txt-secondary-color;
     color: #333;
-    width: auto;
-    align-items: center;
+    width: 100%;
 }
 body {
     background: url(../images/logo.svg), linear-gradient(-$direction, rgba( $theme-color-4, .5), rgba( $theme-color-1, .1), rgba( $theme-color-5, .5));
@@ -20,18 +19,18 @@ body {
     min-height: 100vh;
     padding-bottom: 64px;
     position: relative;
+    main {
+        margin: 0 auto;
+        width: 90%;
+        line-height: 2rem;
+        margin-bottom: 64px;
+        padding: 1rem;
+        color: $txt-primary-color;
+    }
     footer {
         position: absolute;
         bottom: 0;
     }
-    main {
-        padding: auto;
-        margin: 0 10%;
-        width: auto;
-        line-height: 2em;
-        margin-bottom: 64px;
-    }
-    
 }
 
 /* stop body scrolling */
