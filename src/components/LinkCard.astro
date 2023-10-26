@@ -12,14 +12,18 @@ const { href, title, body } = Astro.props;
 	<a href={href}>
 		<h2>
 			{title}
-			<span>🦾</span>
+			<span> 🦾</span>
 		</h2>
 		<p>
 			{body}
 		</p>
 	</a>
 </li>
-<style>
+<style lang="scss">
+	@use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+
 	.link-card {
 		list-style: none;
 		display: flex;
@@ -38,7 +42,7 @@ const { href, title, body } = Astro.props;
 		line-height: 1.4;
 		padding: calc(1.5rem - 1px);
 		border-radius: 8px;
-		color: white;
+		color: $txt-primary-color;
 		background-color: #23262d;
 		opacity: 0.8;
 	}
@@ -56,6 +60,6 @@ const { href, title, body } = Astro.props;
 		background-image: var(--accent-gradient);
 	}
 	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
+		color: $theme-color-1;
 	}
 </style>

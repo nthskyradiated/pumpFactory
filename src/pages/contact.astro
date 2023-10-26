@@ -191,8 +191,10 @@ import { Icon } from 'astro-iconify'
             color: $txt-primary-color;
             font-size: x-large;
          }
-         a:hover {
-            opacity: .65;
+         a:is(:hover, :focus-within) {
+		color: $theme-color-1;
+		transition: .5s ease-in-out;
+
         }
 	}
 
