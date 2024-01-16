@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import services from '../images/services.jpg'
+import { Image } from 'astro:assets';
+---
+
+<Layout title="About The Pump Factory">
+	<main>
+		<Hero title={'Products and Services'} hasImage={false} />
+		<Image src={services} alt="service-list" widths={[240, 540, 720, services.width]} height={360}class='image-responsive' />
+		<section class="about-us">
+			<h1>Who we are</h1>
+			<p>Welcome to Pump Factory, the ultimate destination for bouldering and climbing enthusiasts in Iloilo. Whether you are a beginner or a pro, you will find something to challenge and inspire you at our facility.</p>
+
+				<p>
+					Pump Factory is more than just a gym. It is a community of climbers who share a passion for pushing their limits, learning new skills, and having fun. Our friendly and experienced staff are always ready to help you with tips, advice, and encouragement.
+				</p>
+				
+				<p>
+					At Pump Factory, we offer a variety of climbing options to suit your preferences and goals. You can choose from over 200 bouldering problems, ranging from easy to hard, that are regularly updated by our creative route setters. You can also try our sport climbing routes, which feature top-rope and lead climbing on walls up to 15 meters high. And if you want to spice up your training, you can test your strength and endurance on our moon board, a dynamic and interactive system that allows you to climb on preset or custom-made problems.
+				</p>
+				
+				<p>
+					But Pump Factory is not only about climbing. It is also about having fun and making friends. You can relax and socialize in our spacious lounge area, where you can enjoy free Wi-Fi, snacks, and drinks. You can also join our events and workshops, where you can learn new techniques, meet new people, and have a blast.
+				</p>
+				
+				So what are you waiting for? Come and join us at Pump Factory, where climbing is fun and fun is climbing. We look forward to seeing you soon!</p>
+
+
+		</section>
+	</main>
+</Layout>
+
+<style lang="scss">
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+
+    main {
+        margin: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .image-responsive {
+                max-width: 80%;
+                height: auto;
+            }
+        }
+    }
+
+    .about-us {
+        text-align: left;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin: 1em auto;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+    }
+
+    .text-gradient {
+        @include text-gradient($direction, $colors);
+    }
+
+    @media (max-width: 540px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .container .section-headline {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+</style>

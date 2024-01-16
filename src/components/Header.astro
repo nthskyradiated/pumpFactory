@@ -1,5 +1,6 @@
 ---
 import logo from "../images/PumpFactory.webp"
+import logo2 from "../images/pumpFactory-newLogo2.svg"
 interface Props {
     title: string
     subtitle?: string
@@ -13,7 +14,7 @@ const { title, subtitle} = Astro.props
         <div class="brand-container">
             <div class="logo-container">
                 <a href="#">
-                    <img src={logo.src} alt="pump factory logo" />
+                    <img src={logo2.src} alt="pump factory logo" />
                 </a>
             </div>
             <div class="title-container">
@@ -38,10 +39,10 @@ const { title, subtitle} = Astro.props
 
  
     header {
-        background: inherit;
+        background: $txt-secondary-color;
         width: 100%;
         padding-bottom: 16px;
-
+        
     }
     .container {
         display: flex;
@@ -50,7 +51,7 @@ const { title, subtitle} = Astro.props
         align-items: flex-end;
         margin: auto;
         width: 80%;
-
+        
     }
     .brand-container {
         display: flex;
@@ -61,11 +62,12 @@ const { title, subtitle} = Astro.props
         align-items: center;
     }
     .title-container {
+        color: dimgray;
         display: flex;
         padding: 32px 0;
         flex-direction: column;
         text-align: left;
-        color: $txt-primary-color;
+        // color: $txt-primary-color;
     }
     img{
     width: 120px;
