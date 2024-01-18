@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 import Card2 from '../components/Card2.astro';
 ---
 
-<Layout title="About The Pump Factory">
+<Layout title="FAQ | Pump Factory">
 	<main>
 		<Hero title={'FAQs'} hasImage={false} />
         <div class="container">
@@ -119,24 +119,6 @@ import Card2 from '../components/Card2.astro';
                     </Card2>
                 </li>
             </ol>
-			<h1>Who we are</h1>
-			<p>Welcome to Pump Factory, the ultimate destination for bouldering and climbing enthusiasts in Iloilo. Whether you are a beginner or a pro, you will find something to challenge and inspire you at our facility.</p>
-
-				<p>
-					Pump Factory is more than just a gym. It is a community of climbers who share a passion for pushing their limits, learning new skills, and having fun. Our friendly and experienced staff are always ready to help you with tips, advice, and encouragement.
-				</p>
-				
-				<p>
-					At Pump Factory, we offer a variety of climbing options to suit your preferences and goals. You can choose from over 200 bouldering problems, ranging from easy to hard, that are regularly updated by our creative route setters. You can also try our sport climbing routes, which feature top-rope and lead climbing on walls up to 15 meters high. And if you want to spice up your training, you can test your strength and endurance on our moon board, a dynamic and interactive system that allows you to climb on preset or custom-made problems.
-				</p>
-				
-        
-				<p>
-					But Pump Factory is not only about climbing. It is also about having fun and making friends. You can relax and socialize in our spacious lounge area, where you can enjoy free Wi-Fi, snacks, and drinks. You can also join our events and workshops, where you can learn new techniques, meet new people, and have a blast.
-				</p>
-				
-				So what are you waiting for? Come and join us at Pump Factory, where climbing is fun and fun is climbing. We look forward to seeing you soon!</p>
-
 
 		</section>
 	</main>
@@ -153,13 +135,13 @@ import Card2 from '../components/Card2.astro';
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        // text-align: center;
 
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            margin-bottom: 24px;
             .image-responsive {
                 // max-width: 100%;
                 height: 100;
@@ -167,7 +149,7 @@ import Card2 from '../components/Card2.astro';
         }
     }
 
-    .about-us {
+    .faq {
         text-align: left;
 
         h1 {

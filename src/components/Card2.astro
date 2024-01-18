@@ -12,16 +12,19 @@
     @use '../styles/variables' as *;
     @use '../styles/mixins' as *;
 	.card2-container {
-	border: 1px transparent rgba($accent-light, 80%);
-	background: linear-gradient($accent-dark, rgba($accent, 25%));
+	border: 8px transparent rgba($accent-light, 100);
+	background: #555;
+	opacity: .7;
 	border-radius: 8px;
-	padding: 8px;
+	padding: 4px;
+	margin: 2rem;
 	}
 
 	
 	@media (max-width: 1024px) {
 		.card2-container {
 			width: auto;
+			margin-bottom: 32px;
 		}
 	}
 
