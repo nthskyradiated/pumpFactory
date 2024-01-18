@@ -4,39 +4,40 @@ import pf2 from '../images/pf2.jpg'
 import pf3 from '../images/pf3.jpg'
 import pf4 from '../images/pf4.jpg'
 import pf5 from '../images/pf5.jpg'
+import { Image } from 'astro:assets'
 ---
 
 <div class="carrusel">
     <div class="carrusel-items">
       <div class="carrusel-item">
-        <img src={pf1.src} alt="" />
+        <Image src={pf1 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf2.src} alt="" />
+        <Image src={pf2 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf3.src} alt="" />
+        <Image src={pf3 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf4.src} alt="" />
+        <Image src={pf4 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf5.src} alt="" />
+        <Image src={pf5 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf1.src} alt="" />
+        <Image src={pf1 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf2.src} alt="" />
+        <Image src={pf2 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf3.src} alt="" />
+        <Image src={pf3 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf4.src} alt="" />
+        <Image src={pf4 as any} alt="" />
       </div>
       <div class="carrusel-item">
-        <img src={pf5.src} alt="" />
+        <Image src={pf5 as any} alt="" />
       </div>
     </div>
   </div>
@@ -44,15 +45,15 @@ import pf5 from '../images/pf5.jpg'
   <script>
     const carrusel = document.querySelector(".carrusel-items");
 
-let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-let intervalo = null;
+let maxScrollLeft = carrusel!.scrollWidth - carrusel!.clientWidth;
+let intervalo = null as any;
 let step = 1;
 const start = () => {
   intervalo = setInterval(function () {
-    carrusel.scrollLeft = carrusel.scrollLeft + step;
-    if (carrusel.scrollLeft === maxScrollLeft) {
+    carrusel!.scrollLeft = carrusel!.scrollLeft + step;
+    if (carrusel!.scrollLeft === maxScrollLeft) {
       step = step * -1;
-    } else if (carrusel.scrollLeft === 0) {
+    } else if (carrusel!.scrollLeft === 0) {
       step = step * -1;
     }
   }, 10);
@@ -62,11 +63,11 @@ const stop = () => {
   clearInterval(intervalo);
 };
 
-carrusel.addEventListener("mouseover", () => {
+carrusel!.addEventListener("mouseover", () => {
   stop();
 });
 
-carrusel.addEventListener("mouseout", () => {
+carrusel!.addEventListener("mouseout", () => {
   start();
 });
 

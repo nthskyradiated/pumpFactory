@@ -10,7 +10,7 @@ const { src, alt } = Astro.props
 ---
 
 
-<Image class='image' src={src} alt={alt}/>
+<Image class='image' src={src as any} alt={alt}/>
 
 <style lang="scss">
     @use '../styles/style.scss';

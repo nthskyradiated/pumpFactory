@@ -1,6 +1,7 @@
 ---
 import logo from "../images/PumpFactory.webp"
 import logo2 from "../images/pumpFactory-newLogo2.svg"
+import { Image } from "astro:assets"
 interface Props {
     title: string
     subtitle?: string
@@ -13,9 +14,7 @@ const { title, subtitle} = Astro.props
     <div class="container">
         <div class="brand-container">
             <div class="logo-container">
-                <a href="#">
-                    <img src={logo2.src} alt="pump factory logo" />
-                </a>
+                    <Image src={logo2 as any} alt="pump factory logo" />
             </div>
             <div class="title-container">
                 <h1>{title}</h1>
