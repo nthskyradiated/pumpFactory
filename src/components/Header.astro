@@ -39,7 +39,7 @@ const { title, subtitle} = Astro.props
 
  
     header {
-        background: $txt-secondary-color;
+        background: $bg-primary-color;
         width: 100%;
         padding-bottom: 16px;
         
@@ -92,9 +92,9 @@ const { title, subtitle} = Astro.props
             font-size: x-large;
             color: $txt-primary-color;
             &:hover {
-                opacity: .65;
-                @include  text-gradient($direction, $colors);
-                transition: .4s ease-in-out;
+                opacity: .9;
+                color: $theme-color-1;
+                transition: .6s ease-in-out;
             }
         }
     }

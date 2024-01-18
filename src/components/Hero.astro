@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Card2 from './Card2.astro';
 interface Props {
-    title: string
+    title?: string
     subtitle?: string
     body?: string
     hasImage: boolean
@@ -33,7 +33,8 @@ const noImg = 'noImg'
     
     .Hero-wrapper {
         margin: auto;
-        width: 75%;
+        width: 90%;
+        height: 50%;
         position: relative;
         text-align: center;
     }
@@ -45,8 +46,8 @@ const noImg = 'noImg'
     .img {	
     width: 100%;
     height: 50%;
-    object-fit: cover;
-    opacity: .65;
+    object-fit: contain;
+    // opacity: .65;
     }
     .container :not(.text-gradient) {
         position: absolute;

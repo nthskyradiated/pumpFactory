@@ -7,12 +7,12 @@
 html {
   font-family: "Sora variable", sans-serif;
   background: #0f0f0f;
-  color: #333;
+  color: #fff;
   width: 100%;
 }
 
 body {
-  background: url(../images/logo.svg), linear-gradient(60deg, rgba(86, 125, 154, 0.5), rgba(254, 201, 121, 0.1), rgba(69, 34, 134, 0.5));
+  background: url(../images/logo.svg), linear-gradient(60deg, rgba(246, 248, 252, 0.5), rgba(254, 201, 121, 0.1), rgba(69, 34, 134, 0.1), rgba(241, 241, 241, 0.9));
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;

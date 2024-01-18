@@ -9,11 +9,11 @@
 html {
     font-family: 'Sora variable', sans-serif;
     background: $txt-secondary-color;
-    color: #333;
+    color: #fff;
     width: 100%;
 }
 body {
-    background: url(../images/logo.svg), linear-gradient(-$direction, rgba( $theme-color-4, .5), rgba( $theme-color-1, .1), rgba( $theme-color-5, .5));
+    background: url(../images/logo.svg), linear-gradient(-$direction, rgba( $bg-secondary-color, .5), rgba( $theme-color-1, .1), rgba( $theme-color-5, .1), rgba($txt-primary-color, .9));
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
