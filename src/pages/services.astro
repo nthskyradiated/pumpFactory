@@ -11,7 +11,7 @@ import Card2 from '../components/Card2.astro';
 		<Hero title={'Products and Services'} hasImage={false} />
         <div class="container">
             <Card2>
-            <Image src={services} alt="service-list" class='image-responsive' />
+            <Image src={services as any} alt="service-list" class='image-responsive' />
             </Card2>
         </div>
 		<section class="about-us">
