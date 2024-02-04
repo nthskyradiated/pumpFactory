@@ -2,17 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import LinkCard from '../components/LinkCard.astro';
 import Card from '../components/Card.astro';
-import pf1 from '../images/pf1.jpg'
-import pf2 from '../images/pf2.jpg'
-import pf3 from '../images/pf3.jpg'
+import pf15 from '../images/pf-015.webp'
+import pf2 from '../images/pf-002.webp'
+import pf6 from '../images/pf-006.webp'
 import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="Home Pump Factory">
 	<main>
-		<Hero title='Welcome to ' subtitle='The PumpFactory' hasImage={true} image={pf3} alt={'gym photo'} />
+		<Hero title='Welcome to ' subtitle='The PumpFactory' hasImage={true} image={pf15 as any} />
 		<section class="index-container">
-			<Card src={pf1} alt='some string'/>
+			<Card src={pf6} alt='some string'/>
 			<h2 class="section-headline">Get Ready na! For the new bouldering gym in town! Fun, Fitness, Friendship, and Adventure awaits!</h2>
 			
 		</section>
@@ -23,14 +23,14 @@ import Hero from '../components/Hero.astro';
 				
 				<ul role="list" class="link-card-grid">
 					<LinkCard
-						href="#"
+						href="/services"
 						title="Browse through our services"
-						body="lorem ipsum dolor, sit amet"
+						body="Check out the different packages on offer."
 					/>
 					<LinkCard
-						href="#"
-						title="FAQ"
-						body="Supercharge your project with new training and libraries."
+						href="faq"
+						title="FAQ's"
+						body="Get started on your bouldering journey. Read the FAQ's here."
 					/>
 					<LinkCard
 						href="#"

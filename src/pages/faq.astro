@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import pf8 from '../images/pf-013.webp'
+import { Image } from 'astro:assets';
+import Card2 from '../components/Card2.astro';
+---
+
+<Layout title="FAQ | Pump Factory">
+	<main>
+		<Hero title={'FAQs'} hasImage={false} />
+        <div class="container">
+            <Card2>
+            <Image src={pf8 as any} alt="pf-pic" class='image-responsive' />
+            </Card2>
+        </div>
+		<section class="faq">
+            <ol>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: What is bouldering, and how is it different from regular climbing?
+                        </strong>
+                        <p>
+                            A: Bouldering is a form of rock climbing that involves climbing short routes, or "problems," without the use of ropes or harnesses. It focuses on strength, technique, and problem-solving. Unlike traditional climbing, bouldering is done at lower heights, typically up to 15 feet, with the emphasis on power and agility.
+                        </p>
+
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: What are the benefits of bouldering?
+                        </strong>
+                        <p>
+                            A: Bouldering offers a full-body workout that enhances strength, flexibility, and cardiovascular fitness. It also improves problem-solving skills, mental focus, and builds a strong sense of community among climbers.
+                        </p>
+
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: Are there any risks involved in bouldering?
+                        </strong>
+                        <p>
+                            A: While bouldering is generally safe, like any physical activity, it carries some risks. Potential injuries include sprains, strains, or bruises. Proper technique, adequate warm-up, and attentive spotting can minimize these risks.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: Do I need any prior experience to start bouldering?
+                        </strong>
+                        <p>
+                            A: No prior experience is required! Bouldering is suitable for all skill levels, and our gym caters to beginners with routes of varying difficulty. Our staff is also available for introductory sessions and assistance.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: What equipment do I need for bouldering at Pump Factory?
+                        </strong>
+                        <p>
+                            A: All you need are comfortable athletic clothes and climbing shoes. We provide rental shoes, but many climbers prefer to use their own for a more personalized fit. Chalk is also recommended for better grip.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: Is bouldering suitable for all ages?
+                        </strong>
+                        <p>
+                            A: Yes, bouldering is an inclusive activity suitable for all ages. We offer climbing options for children and adults, and our staff can help tailor the experience to accommodate different skill levels.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: Can I climb alone, or do I need a partner?
+                        </strong>
+                        <p>
+                            A: Bouldering is often done individually, and you don't need a climbing partner. However, having a supportive community can enhance your experience. Our gym is designed for both solo and group climbing.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: How do I progress in difficulty as I improve my skills?
+                        </strong>
+                        <p>
+                            A: Our bouldering problems are color-coded by difficulty level, allowing you to gradually progress from easier to more challenging routes. As you gain confidence and skill, you can explore higher grades and intricate climbing techniques.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: Are there any fitness requirements to start bouldering?
+                        </strong>
+                        <p>
+                            A: Bouldering is adaptable to various fitness levels. Whether you're a beginner or an experienced climber, our gym provides a range of routes to cater to different abilities. The more you climb, the more you'll naturally enhance your fitness.
+                        </p>
+                    </Card2>
+                </li>
+                <li>
+                    <Card2>
+                        <strong>
+                            Q: How can I get involved in the Pump Factory climbing community?
+                        </strong>
+                        <p>
+                            A: Joining the Pump Factory community is easy! Attend our events, participate in climbing leagues, or simply strike up conversations with fellow climbers. We also offer classes and workshops for skill improvement and social engagement.
+                        </p>
+                    </Card2>
+                </li>
+            </ol>
+
+		</section>
+	</main>
+</Layout>
+
+<style lang="scss">
+    @use '../styles/style.scss';
+    @use '../styles/variables' as *;
+    @use '../styles/mixins' as *;
+
+    main {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // text-align: center;
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+            .image-responsive {
+                // max-width: 100%;
+                height: 100;
+            }
+        }
+    }
+
+    .faq {
+        text-align: left;
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1;
+            margin: 1em auto;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+    }
+
+    .text-gradient {
+        @include text-gradient($direction, $colors);
+    }
+
+    @media (max-width: 540px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .container .section-headline {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+</style>

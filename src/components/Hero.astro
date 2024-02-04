@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Card2 from './Card2.astro';
 interface Props {
-    title: string
+    title?: string
     subtitle?: string
     body?: string
     hasImage: boolean
@@ -33,7 +33,8 @@ const noImg = 'noImg'
     
     .Hero-wrapper {
         margin: auto;
-        width: 75%;
+        width: 90%;
+        height: 50%;
         position: relative;
         text-align: center;
     }
@@ -45,10 +46,10 @@ const noImg = 'noImg'
     .img {	
     width: 100%;
     height: 50%;
-    object-fit: cover;
-    opacity: .85;
+    object-fit: contain;
+    // opacity: .65;
     }
-    .container {
+    .container :not(.text-gradient) {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -56,7 +57,8 @@ const noImg = 'noImg'
         width: auto;
         height: auto;
         text-align: center;
-        color: midnightblue;
+        color: $theme-color-1;
+        text-shadow: -.5px -.5px 3 #555, .5px -.5px 3 #555, -.5px 1px 3 #555, .5px .5px 1 #333;
         line-height: 3.2rem;
     }
 
@@ -69,7 +71,7 @@ const noImg = 'noImg'
 	}
 	.text-gradient {
 		@include text-gradient($direction, $colors);
-        opacity: .85;
+        // opacity: .85;
 	}
 
     @media (max-width: 768px) {
