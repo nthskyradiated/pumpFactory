@@ -12,16 +12,16 @@ html {
 }
 
 body {
-  background: url(../images/logo.svg), linear-gradient(60deg, rgba(246, 248, 252, 0.5), rgba(254, 201, 121, 0.1), rgba(69, 34, 134, 0.1), rgba(241, 241, 241, 0.9));
-  background-repeat: no-repeat;
+  background: url(../images/asset.webp), linear-gradient(-60deg, rgba(246, 248, 252, 0.5), rgba(254, 201, 121, 0.1), rgba(69, 34, 134, 0.1), rgba(241, 241, 241, 0.9));
+  background-repeat: repeat;
   background-size: cover;
   min-height: 100vh;
   padding-bottom: 64px;
   position: relative;
 }
 body main {
-  margin: 0 auto;
-  width: 90%;
+  margin: 0 0;
+  width: 100%;
   line-height: 2rem;
   margin-bottom: 64px;
   padding: 1rem;

@@ -15,9 +15,9 @@
         
     <nav id="mobile-menu" class="mobile-main-menu" aria-label="mobile">
         <ul>
-            <li><a href="/" class="">Home</a></li>
-            <li><a href="/about" class="">About</a></li>
-            <li><a href="/contact" class="">Contact</a></li>
+            <li><a href="/" class="glitch">Home</a></li>
+            <li><a href="/about" class="glitch">About</a></li>
+            <li><a href="/contact" class="glitch">Contact</a></li>
         </ul>
     </nav>
 
@@ -118,7 +118,8 @@ a:not(.unstyled), a:visited{
         color: white;
     }
 a:hover {
-    @include  text-gradient($direction, $colors);
+    // @include  text-gradient($direction, $colors);
+    color: $theme-color-7;
     transition: .5s ease-in-out;
 }
 

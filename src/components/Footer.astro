@@ -1,11 +1,13 @@
 ---
 import { Icon } from 'astro-iconify'
+import { Image } from 'astro:assets';
+import logo from '../images/logo.svg';
 ---
 
 <footer>
     <div class="footer">
-
-        <span>Copyright &copy; 2024 All Rights Reserved</span>
+        <a href="#"><Image src={logo as any} height={50} alt={'the pump factory logo'} /></a>
+        <span>&copy; 2024 The Pump Factory. All Rights Reserved</span>
         <div class="socials">
         <ul>
             <li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" /></a></li>
@@ -31,7 +33,7 @@ import { Icon } from 'astro-iconify'
     }
     .footer {
         margin: auto;
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -74,7 +76,9 @@ import { Icon } from 'astro-iconify'
 
 
      @media (max-width: 768px) {
-
+        footer {
+            padding-top: -48px;
+        };
         .footer {
             display: flex;
             flex-direction: column;
