@@ -14,10 +14,12 @@
   },
   "dependencies": {
     "@fontsource-variable/sora": "^5.0.13",
+    "@types/mapbox-gl": "^2.7.20",
     "astro": "^3.2.3",
     "astro-color-scheme": "^1.1.2",
     "astro-iconify": "^1.2.0",
     "astro-imagetools": "^0.9.0",
+    "mapbox-gl": "^3.1.2",
     "sass": "^1.69.0"
   }
 }

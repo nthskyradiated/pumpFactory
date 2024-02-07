@@ -2,8 +2,10 @@
 import logo from "../images/PumpFactory.webp"
 import logo2 from "../images/pumpFactory-newLogo2.svg"
 import { Image } from "astro:assets"
+import HeaderPic from "../images/headerpic.svg"
 interface Props {
     title: string
+    // title2?: string
     subtitle?: string
 }
 
@@ -14,20 +16,22 @@ const { title, subtitle} = Astro.props
     <div class="container">
         <div class="brand-container">
             <div class="logo-container">
-                    <Image src={logo2 as any} alt="pump factory logo" />
+                <Image src={logo2 as any} alt="pump factory logo" />
             </div>
             <div class="title-container">
-                <h1>{title}</h1>
+                <div class="title-container2">
+                <h1 class="glitch title">{title}</h1>
+                </div>
                 <p>{subtitle}</p>
             </div>
         </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li class="glitch"><a href="/">Home</a></li>
+                <li class="glitch"><a href="/about">About</a></li>
+                <li class="glitch"><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -35,12 +39,30 @@ const { title, subtitle} = Astro.props
     @use '../styles/style.scss';
     @use '../styles/variables' as *;
     @use '../styles/mixins' as *;
+    @use '../styles/glitch' as *;
 
- 
+ .header-pic{
+    // position: absolute;
+    transform: translateY(4em);
+ }
     header {
+        position: relative;
         // background: $bg-primary-color;
         width: 100%;
         padding-bottom: 16px;
+        &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('../images/headerpic.svg');
+        background-position: center center;
+        background-size: cover;
+        filter: brightness(40%);
+        z-index: -1;
+    }
         
     }
     .container {
@@ -66,7 +88,8 @@ const { title, subtitle} = Astro.props
         padding: 32px 0;
         flex-direction: column;
         text-align: left;
-        color:tomato;
+        color:$theme-color-7;
+        font-style: italic;
     }
     img{
     width: 120px;
@@ -92,8 +115,8 @@ const { title, subtitle} = Astro.props
             color: $txt-primary-color;
             &:hover {
                 opacity: .9;
-                color: $theme-color-1;
-                transition: .4s ease-in-out;
+                color: $theme-color-7;
+                transition: .3s ease-in-out;
             }
         }
     }

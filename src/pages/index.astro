@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LinkCard from '../components/LinkCard.astro';
 import Card from '../components/Card.astro';
-import pf15 from '../images/pf-015.webp'
+import pf16 from '../images/pf-016.webp'
 import pf2 from '../images/pf-002.webp'
 import pf6 from '../images/pf-006.webp'
 import Hero from '../components/Hero.astro';
@@ -10,7 +10,7 @@ import Hero from '../components/Hero.astro';
 
 <Layout title="Home Pump Factory">
 	<main>
-		<Hero title='Welcome to ' subtitle='The PumpFactory' hasImage={true} image={pf15 as any} />
+		<Hero title='The Pump ' subtitle={'Factory'} hasImage={true} image={pf16 as any} />
 		<section class="index-container">
 			<Card src={pf6} alt='some string'/>
 			<h2 class="section-headline">Get Ready na! For the new bouldering gym in town! Fun, Fitness, Friendship, and Adventure awaits!</h2>
@@ -118,6 +118,9 @@ import Hero from '../components/Hero.astro';
 		}
 	}
 	@media (max-width: 540px) {
+		section {
+			padding-bottom: 64px;
+		}
         h1 {
 		font-size: 2rem;
 		text-align: center;
@@ -133,4 +136,9 @@ import Hero from '../components/Hero.astro';
 		}
 
     }
+	@media (max-width: 768px) {
+		section {
+			margin-bottom: 64px;
+		}
+	}
 </style>
