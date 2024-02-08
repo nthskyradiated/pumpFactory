@@ -87,8 +87,6 @@ import { Icon } from 'astro-iconify'
 			</ul>
 		</div>
 	</section>
-	<div id="map">
-	</div>
 
 </Layout>
 <style lang="scss">
@@ -213,13 +211,6 @@ import { Icon } from 'astro-iconify'
 		border-radius: 10px;
 			
 		}
-		iframe {
-		width: 85%;
-		height: 250%;
-		border-radius: 10px;
-		margin: auto;
-			
-		}
 	@media (max-width: 768px) {
 		.contact-wrapper {
 		width: 100%;
@@ -234,13 +225,3 @@ import { Icon } from 'astro-iconify'
 		}
 	}
   </style>
-<script>
-	// import mapboxgl from "mapbox-gl";
-	mapboxgl.accessToken = import.meta.env.MAPBOX_API
-	var map = new mapboxgl.Map({
-	  container: 'map',
-	  style: 'mapbox://styles/mapbox/streets-v11',
-	  center: [55.28317203282275, 25.217735871271184],
-	  zoom: 18,
-	});
-</script>

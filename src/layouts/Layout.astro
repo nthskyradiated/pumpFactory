@@ -22,8 +22,6 @@ import { ViewTransitions } from 'astro:transitions';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
-		<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 		<!-- <script is:inline src="https://kit.fontawesome.com/72852e9073.js" crossorigin="anonymous"></script> -->
 		<!-- <ViewTransitions /> -->
 		<title>{title}</title>
@@ -39,13 +37,5 @@ import { ViewTransitions } from 'astro:transitions';
 </html>
 <script>
 	import '../scripts/hamburger.js'
-	// import mapboxgl from "mapbox-gl";
-	mapboxgl.accessToken = import.meta.env.MAPBOX_API
-	var map = new mapboxgl.Map({
-	  container: 'map',
-	  style: 'mapbox://styles/mapbox/streets-v11',
-	  center: [55.28317203282275, 25.217735871271184],
-	  zoom: 18,
-	});
 </script>
 
