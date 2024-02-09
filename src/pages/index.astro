@@ -13,7 +13,7 @@ import Hero from '../components/Hero.astro';
 		<Hero title='The Pump ' subtitle={'Factory'} hasImage={true} image={pf16 as any} />
 		<section class="index-container">
 			<Card src={pf6} alt='some string'/>
-			<p class="section-headline">Super-charge your climbing experience at Iloilo's premier climbing destination Pump Factory – more than just a gym, it's a vertical adventure waiting to be explored.</p>
+			<p>Super-charge your climbing experience at Iloilo's premier climbing destination Pump Factory – more than just a gym, it's a vertical adventure waiting to be explored.</p>
 			
 		</section>
 		<section class="container2">
@@ -56,7 +56,7 @@ import Hero from '../components/Hero.astro';
 		gap: 5rem;
 		margin: 5% auto;
 
-		.section-headline {
+		p {
 			font-size: 2rem;
 			font-weight: 500;
 			line-height: 4rem;
@@ -102,11 +102,15 @@ import Hero from '../components/Hero.astro';
 			flex-direction: column;
 			align-items: center;
 			gap: .25rem;
+			p {
+			text-align: left;
+			width: auto;
+			font-size: 1.5rem;
+			font-weight: 500;
+			line-height: 3rem;
+	
 		}
-		.section-headline {
-		text-align: center;
-		width: auto;
-	}
+		}
 		.container2 {
 			flex-direction: column;
 			align-items: center;
@@ -130,15 +134,15 @@ import Hero from '../components/Hero.astro';
             margin-bottom: -40px
         }
 
-		.container .section-headline {
-			font-size: 2rem;
-			line-height: 2.5rem;
+		.container .section-headline p {
+			font-size: 1rem;
+			line-height: 1rem;
 		}
 
     }
 	@media (max-width: 768px) {
 		section {
-			margin-bottom: 64px;
+			margin-bottom: 4rem;
 		}
 	}
 </style>

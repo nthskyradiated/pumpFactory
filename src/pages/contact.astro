@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import pf15 from '../images/pf-015.webp'
 import Hero from '../components/Hero.astro';
 import { Icon } from 'astro-iconify'
+import Map from '../components/Map.astro';
 ---
 
 <Layout title="Contact Pump Factory">
@@ -79,14 +80,18 @@ import { Icon } from 'astro-iconify'
 			<h1>OR</h1>
 		</div>
 		<div class="social-contact">
-			<h2>Through our social media</h2>
+			<h2>Through social media</h2>
 			<ul class="social-list">
 				<li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" />/ thepumpfactory</a></li>
             	<li><a href="https://www.instagram.com/thepumpfactory__/" target="blank"><Icon name="bxl:instagram" />/ thepumpfactory</a></li>
-            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:whatsapp" />thepumpfactory</a></li>
+            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:whatsapp" />/ thepumpfactory</a></li>
 			</ul>
 		</div>
 	</section>
+	<div class="map-container">
+		<h1>Our Location</h1>
+		<Map />
+	</div>
 
 </Layout>
 <style lang="scss">
@@ -204,13 +209,18 @@ import { Icon } from 'astro-iconify'
 
         }
 	}
-
-			#map {
-		width: 100%;
-		height: 250%;
-		border-radius: 10px;
-			
+	.map-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		margin: 0 auto 48px auto;
+		h1	{
+			margin-bottom: 16px
 		}
+
+	}
+
 	@media (max-width: 768px) {
 		.contact-wrapper {
 		width: 100%;
@@ -223,5 +233,8 @@ import { Icon } from 'astro-iconify'
             	font-size: medium;
         	}
 		}
+		.map-container {
+		padding-bottom: 80px;
+	}
 	}
   </style>

@@ -19,7 +19,7 @@ body {
     min-height: 100vh;
     padding-bottom: 64px;
     position: relative;
-    // z-index: -2;
+    
     main {
         margin: 0 0;
         width: 100%;
@@ -38,3 +38,24 @@ body {
 .stop-scrolling {
 overflow: hidden;
 }
+.mapboxgl-popup-content {
+    p {
+      font-size: 1rem;
+      color: $txt-secondary-color;
+    }
+  }
+
+  .mapbox-map {
+    width: 85%;
+    height: clamp(34.375rem, 31.3931rem + 12.7226vw, 37.5rem);
+    border-radius: 8px;
+    margin: auto;
+  }
+
+  .marker {
+    background-image: url(../images/icon-location.svg);
+    background-size: cover;
+    width: 66px;
+    height: 88px;
+    cursor: pointer;
+  }

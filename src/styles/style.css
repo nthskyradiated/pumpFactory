@@ -35,4 +35,24 @@ body footer {
 /* stop body scrolling */
 .stop-scrolling {
   overflow: hidden;
+}
+
+.mapboxgl-popup-content p {
+  font-size: 1rem;
+  color: #0f0f0f;
+}
+
+.mapbox-map {
+  width: 85%;
+  height: clamp(34.375rem, 31.3931rem + 12.7226vw, 37.5rem);
+  border-radius: 8px;
+  margin: auto;
+}
+
+.marker {
+  background-image: url(../images/icon-location.svg);
+  background-size: cover;
+  width: 66px;
+  height: 88px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
