@@ -8,14 +8,14 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 <script>
   import mapboxgl from 'mapbox-gl'
 
-  mapboxgl.accessToken = `${process.env.PUBLIC_MAPBOX}`
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWlyYW5hZG9yIiwiYSI6ImNsMzQ5eW4zdDAxejkzY21xY3gwM2J5ZHgifQ.PGN6cfbpIRcBDoYUYCK-Xw'
 
   const lng = 122.54184578205275;
   const lat = 10.684564788998765;
 
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/miranador/cl8k1ix05004114pept031o8n',
+    // style: 'mapbox://styles/miranador/cl8k1ix05004114pept031o8n',
     center: [lng, lat],
     zoom: 15,
     dragPan: true,
