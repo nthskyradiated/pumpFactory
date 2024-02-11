@@ -60,6 +60,7 @@ const { title, subtitle} = Astro.props
         background-image: url('../images/headerpic.svg');
         background-position: center center;
         background-size: cover;
+        background-repeat: no-repeat;
         filter: brightness(40%);
         z-index: -1;
     }
@@ -111,7 +112,7 @@ const { title, subtitle} = Astro.props
         a, a:visited{
             text-decoration: none;
             text-transform: uppercase;
-            font-size: x-large;
+            font-size: large;
             color: $txt-primary-color;
             &:hover {
                 opacity: .9;

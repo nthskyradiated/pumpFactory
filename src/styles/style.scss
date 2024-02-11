@@ -13,7 +13,7 @@ html {
     width: 100%;
 }
 body {
-    background: url(../images/asset.webp), linear-gradient(-$direction, rgba( $bg-secondary-color, .5), rgba( $theme-color-1, .1), rgba( $theme-color-5, .1), rgba($txt-primary-color, .9));
+    background: url(../images/asset.webp);
     background-repeat: repeat;
     background-size: cover;
     min-height: 100vh;

@@ -6,13 +6,13 @@
 
 html {
   font-family: "Sora variable", sans-serif;
-  background: #0f0f0f;
+  background: #050505;
   color: #fff;
   width: 100%;
 }
 
 body {
-  background: url(../images/asset.webp), linear-gradient(-60deg, rgba(246, 248, 252, 0.5), rgba(254, 201, 121, 0.1), rgba(69, 34, 134, 0.1), rgba(241, 241, 241, 0.9));
+  background: url(../images/asset.webp);
   background-repeat: repeat;
   background-size: cover;
   min-height: 100vh;
@@ -39,7 +39,7 @@ body footer {
 
 .mapboxgl-popup-content p {
   font-size: 1rem;
-  color: #0f0f0f;
+  color: #050505;
 }
 
 .mapbox-map {
