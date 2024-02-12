@@ -10,5 +10,3 @@ function navToggle() {
   document.body.classList.toggle('stop-scrolling');
   menu.classList.toggle('show-menu');
 }
-
-

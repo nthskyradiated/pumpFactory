@@ -20,16 +20,16 @@ const { title, subtitle} = Astro.props
             </div>
             <div class="title-container">
                 <div class="title-container2">
-                <h1 class="glitch title">{title}</h1>
+                <h1 class="title">{title}</h1>
                 </div>
                 <p>{subtitle}</p>
             </div>
         </div>
         <nav>
             <ul>
-                <li class="glitch"><a href="/">Home</a></li>
-                <li class="glitch"><a href="/about">About</a></li>
-                <li class="glitch"><a href="/contact">Contact</a></li>
+                <li class=""><a href="/" class="hack" data-value="home">Home</a></li>
+                <li class=""><a href="/about" class="hack" data-value="about">About</a></li>
+                <li class=""><a href="/contact" class="hack" data-value="contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -41,10 +41,6 @@ const { title, subtitle} = Astro.props
     @use '../styles/mixins' as *;
     @use '../styles/glitch' as *;
 
- .header-pic{
-    // position: absolute;
-    transform: translateY(4em);
- }
     header {
         position: relative;
         // background: $bg-primary-color;
