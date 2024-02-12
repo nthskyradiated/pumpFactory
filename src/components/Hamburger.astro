@@ -141,12 +141,11 @@ a:hover {
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let interval = null;
+let interval : any = null;
 const elements = document.querySelectorAll('.hack');
-// Add the event listener to each element
+
 elements.forEach(element => {
-  element.onmouseover = event => {  
-    console.log(event);
+  element.onmouseover = event  => {  
     let iteration = 0;
   
   clearInterval(interval);

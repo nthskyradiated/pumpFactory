@@ -12,8 +12,7 @@ import Card from '../components/Card.astro';
 	<main>
 		<Hero title={'Products & Services'} hasImage={false} />
         <div class="container">
-            <!-- <Hero  hasImage={true} image={services as any} /> -->
-            <Card src={services as any} alt="service-list" class='image-responsive'>
+            <Card src={services as any} alt="service-list" >
 
             </Card>
         </div>
@@ -51,7 +50,6 @@ import Card from '../components/Card.astro';
         text-align: center;
 
         .container {
-
             align-items: center;
             width: 85%;
 		    margin: auto;
@@ -80,9 +78,6 @@ import Card from '../components/Card.astro';
         }
     }
 
-    .text-gradient {
-        @include text-gradient($direction, $colors);
-    }
 
     @media (max-width: 540px) {
         h1 {

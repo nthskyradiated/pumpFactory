@@ -20,8 +20,9 @@ import Button from '../components/Button.astro';
 						type="text"
 						name="firstname"
 						id="firstname"
-						placeholder="firstname"
+						placeholder="first name"
 						class="formbold-form-input"
+						required
 						/>
 						<label for="firstname" class="formbold-form-label"> First name </label>
 					</div>
@@ -30,8 +31,9 @@ import Button from '../components/Button.astro';
 						type="text"
 						name="lastname"
 						id="lastname"
-						placeholder="lastname"
+						placeholder="last name"
 						class="formbold-form-input"
+						required
 						/>
 						<label for="lastname" class="formbold-form-label"> Last name </label>
 					</div>
@@ -45,6 +47,7 @@ import Button from '../components/Button.astro';
 						id="email"
 						placeholder="john@mail.com"
 						class="formbold-form-input"
+						required
 						/>
 						<label for="email" class="formbold-form-label"> Mail </label>
 					</div>
@@ -67,6 +70,7 @@ import Button from '../components/Button.astro';
 						  id="message"
 						  placeholder="Write your message..."
 						  class="formbold-form-input"
+						  required
 					  ></textarea>
 					  <label for="message" class="formbold-form-label"> Message </label>
 				  </div>
@@ -138,12 +142,15 @@ import Button from '../components/Button.astro';
 	.formbold-textarea {
 	  display: flex;
 	  flex-direction: column-reverse;
+	  margin-right: 4px;
 	}
   
 	.formbold-form-input {
 	  width: 100%;
-	  padding-bottom: 10px;
+	  padding: 5px 8px;
+	//   padding-left: 8px;
 	  border: none;
+	  border-radius: 8px;
 	  border-bottom: 1px solid #DDE3EC;
 	  background: $bg-secondary-color;
 	  opacity: .75;
@@ -152,12 +159,13 @@ import Button from '../components/Button.astro';
 	  color: $bg-primary-color;
 	  outline: none;
 	  resize: none;
+	
 	}
 	.formbold-form-input::placeholder {
 	  color: #0f0f0f;
 	}
 	.formbold-form-input:focus {
-	  border: teal 1px solid;
+	  border: $theme-color-7 1px solid;
 	}
 	.formbold-form-label {
 	  color: whitesmoke;
@@ -168,20 +176,8 @@ import Button from '../components/Button.astro';
 	  margin-bottom: 18px;
 	}
 	.formbold-form-input:focus + .formbold-form-label {
-	  color: teal;
+	  color: $theme-color-7;
 	}
-  
-	// .formbold-btn {
-	//   font-size: 16px;
-	//   border-radius: 5px;
-	//   padding: 12px 25px;
-	//   border: none;
-	//   font-weight: 500;
-	//   background-color: $theme-color-5;
-	//   color: $txt-primary-color;
-	//   cursor: pointer;
-	//   margin-top: 25px;
-	// }
   
 	.social-contact {
 		display: flex;
@@ -203,7 +199,7 @@ import Button from '../components/Button.astro';
             font-size: x-large;
          }
          a:is(:hover, :focus-within) {
-		color: $theme-color-1;
+		color: $theme-color-7;
 		transition: .5s ease-in-out;
 
         }
