@@ -5,16 +5,17 @@ import services from '../images/services.jpg'
 import { Image } from 'astro:assets';
 import Card2 from '../components/Card2.astro';
 import Card3 from '../components/Card3.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout title="About The Pump Factory">
 	<main>
-		<Hero title={'Products and Services'} hasImage={false} />
+		<Hero title={'Products & Services'} hasImage={false} />
         <div class="container">
             <!-- <Hero  hasImage={true} image={services as any} /> -->
-            <Card3>
-            <Image src={services as any} alt="service-list" class='image-responsive' />
-            </Card3>
+            <Card src={services as any} alt="service-list" class='image-responsive'>
+
+            </Card>
         </div>
 		<section class="about-us">
 			<h1>We Also Offer</h1>

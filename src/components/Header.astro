@@ -25,11 +25,11 @@ const { title, subtitle} = Astro.props
                 <p>{subtitle}</p>
             </div>
         </div>
-        <nav>
+        <nav class="desktop-main-menu">
             <ul>
-                <li class=""><a href="/" class="hack" data-value="home">Home</a></li>
-                <li class=""><a href="/about" class="hack" data-value="about">About</a></li>
-                <li class=""><a href="/contact" class="hack" data-value="contact">Contact</a></li>
+                <li class=""><a href="/" class="" data-value="home">Home</a></li>
+                <li class=""><a href="/about" class="" data-value="about">About</a></li>
+                <li class=""><a href="/contact" class="" data-value="contact">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -43,7 +43,6 @@ const { title, subtitle} = Astro.props
 
     header {
         position: relative;
-        // background: $bg-primary-color;
         width: 100%;
         padding-bottom: 16px;
         &::before {
@@ -94,15 +93,18 @@ const { title, subtitle} = Astro.props
     padding-top: 8px;
     }
     
-
+    .desktop-main-menu ul li {
+    position: relative;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
     ul{
         display: flex;
-        flex-direction: row;
         li {
             list-style: none;
             text-align: center;
             align-items: bottom;
-            padding-right: 32px;
+            // padding-right: 32px;
             
         }
         a, a:visited{
@@ -118,7 +120,24 @@ const { title, subtitle} = Astro.props
         }
     }
     
+   .desktop-main-menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $theme-color-7;;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: right center;
+}
 
+.desktop-main-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition-duration: 0.4s;
+}
 
     @media (max-width: 768px) {
         nav {
