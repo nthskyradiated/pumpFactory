@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import _variables from '../styles/_variables.scss'
+// import { slide } from 'astro:transitions';
 interface Props {
 
 	src: string;
@@ -10,7 +11,7 @@ const { src, alt } = Astro.props
 ---
 
 
-<Image class='image' src={src as any} alt={alt}/>
+<Image class='image' src={src as any} alt={alt} />
 
 <style lang="scss">
     @use '../styles/style.scss';
@@ -24,7 +25,8 @@ const { src, alt } = Astro.props
 	padding: 4px;
 	border-radius: 8px;
 	width: 70%;
-    height: 100%
+    height: 100%;
+	// animation: fadeIn 0.5s ease-in-out 0.4s;
 	}
 
 	

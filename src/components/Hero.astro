@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Card2 from './Card2.astro';
+import { slide, fade } from 'astro:transitions';
 interface Props {
     title?: string
     subtitle?: string
@@ -12,7 +13,7 @@ const { title, body, hasImage, image, subtitle} = Astro.props
 const noImg = 'noImg'
 ---
 
-<section class="Hero-wrapper">
+<section class="Hero-wrapper" transition:animate={fade({ duration: '.8s' })}>
     <div class= {!hasImage as string && noImg } >
             {hasImage && 
             <Card2>
@@ -37,7 +38,7 @@ const noImg = 'noImg'
         height: 50%;
         position: relative;
         text-align: center;
-        animation: fadeIn 2s ease-in-out;
+        // animation: fadeIn 2s ease-in-out;
     }
     .noImg {
         height: 200px;
@@ -70,9 +71,9 @@ const noImg = 'noImg'
 		text-align: center;
 		margin-bottom: 1em;
         width: max-content;
-        animation: fadeInUp 0.5s ease-in-out;
+        animation: fadeInUp 0.4s ease-in-out;
         span {
-            animation: fadeInUp 1s ease-in-out;
+            // animation: fadeInUp 1s ease-in-out;
             color: $theme-color-7
         }
 	}

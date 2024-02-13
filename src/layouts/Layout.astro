@@ -23,14 +23,13 @@ import { ViewTransitions } from 'astro:transitions';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<!-- <script is:inline src="https://kit.fontawesome.com/72852e9073.js" crossorigin="anonymous"></script> -->
-		<!-- <ViewTransitions /> -->
+		<ViewTransitions />
 		<title>{title}</title>
 
 		</head>
 	<body>
 		<Header title='Pump Factory' subtitle= "Embrace the PUMP" />
-		<Hamburger />
+		<Hamburger transition:persist />
 		<slot />
 		<Footer />
 

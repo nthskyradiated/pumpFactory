@@ -4,34 +4,64 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 <div class="mapbox-map" id="map"></div>
 
-
 <script>
+  
   import mapboxgl from 'mapbox-gl'
+   mapboxgl.accessToken = 'pk.eyJ1IjoibWlyYW5hZG9yIiwiYSI6ImNsMzQ5eW4zdDAxejkzY21xY3gwM2J5ZHgifQ.PGN6cfbpIRcBDoYUYCK-Xw'
 
+const lng = 122.54184578205275;
+const lat = 10.684564788998765;
+
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  // style: 'mapbox://styles/miranador/cl8k1ix05004114pept031o8n',
+  center: [lng, lat],
+  zoom: 15,
+  dragPan: true,
+  minZoom: 15
+});
+
+function mountedMap() {
   mapboxgl.accessToken = 'pk.eyJ1IjoibWlyYW5hZG9yIiwiYSI6ImNsMzQ5eW4zdDAxejkzY21xY3gwM2J5ZHgifQ.PGN6cfbpIRcBDoYUYCK-Xw'
 
-  const lng = 122.54184578205275;
-  const lat = 10.684564788998765;
+const lng = 122.54184578205275;
+const lat = 10.684564788998765;
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    // style: 'mapbox://styles/miranador/cl8k1ix05004114pept031o8n',
-    center: [lng, lat],
-    zoom: 15,
-    dragPan: true,
-    minZoom: 15
-  });
-
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mapbox/streets-v11',
+  // style: 'mapbox://styles/miranador/cl8k1ix05004114pept031o8n',
+  center: [lng, lat],
+  zoom: 15,
+  dragPan: true,
+  minZoom: 15
+});
   const popup = new mapboxgl.Popup().setHTML(
-    '<p><strong>3rd St., Juntado Subdivision</strong><br />Calumpang,<br>Iloilo City<br>Ph</p>'
-  );
+  '<p><strong>3rd St., Juntado Subdivision</strong><br />Calumpang,<br>Iloilo City<br>Ph</p>'
+);
+const customMarker = document.createElement('div');
+customMarker.classList.add('marker');
 
-  const customMarker = document.createElement('div');
-  customMarker.classList.add('marker');
+new mapboxgl.Marker(customMarker)
+  .setLngLat([lng, lat])
+  .setPopup(popup)
+  .addTo(map);
 
-  new mapboxgl.Marker(customMarker)
-    .setLngLat([lng, lat])
-    .setPopup(popup)
-    .addTo(map);
+}
+
+const popup = new mapboxgl.Popup().setHTML(
+  '<p><strong>3rd St., Juntado Subdivision</strong><br />Calumpang,<br>Iloilo City<br>Ph</p>'
+);
+
+const customMarker = document.createElement('div');
+customMarker.classList.add('marker');
+
+new mapboxgl.Marker(customMarker)
+  .setLngLat([lng, lat])
+  .setPopup(popup)
+  .addTo(map);
+
+document.addEventListener('astro:page-load', mountedMap);
+  
 </script>
