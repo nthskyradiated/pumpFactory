@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-iconify'
+import {Icon} from 'astro-icon/components'
 import { Image } from 'astro:assets';
 import logo from '../images/logo.svg';
 ---
@@ -10,8 +10,8 @@ import logo from '../images/logo.svg';
         <span>&copy; 2024 The Pump Factory. All Rights Reserved</span>
         <div class="socials">
         <ul>
-            <li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" /></a></li>
-            <li><a href="https://www.instagram.com/thepumpfactory__/" target="blank"><Icon name="bxl:instagram" /></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" width={40}/></a></li>
+            <li><a href="https://www.instagram.com/thepumpfactory__/" target="blank"><Icon name="bxl:instagram" width={40} /></a></li>
         </ul>
     </div>
     </div>
@@ -59,8 +59,8 @@ import logo from '../images/logo.svg';
             list-style: none;
             margin-right: 32px;
             svg {
-                height: 32px;
-                bottom: 12px;
+                height: 40px;
+				margin-bottom: -12px;
             }
         }
         a {

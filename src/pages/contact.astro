@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import pf15 from '../images/pf-015.webp'
 import Hero from '../components/Hero.astro';
-import { Icon } from 'astro-iconify'
+import {Icon} from 'astro-icon/components'
 import Map from '../components/Map.astro';
 import Button from '../components/Button.astro';
 ---
@@ -85,9 +85,12 @@ import Button from '../components/Button.astro';
 		<div class="social-contact">
 			<h2>Through social media</h2>
 			<ul class="social-list">
-				<li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" />/ thepumpfactory</a></li>
-            	<li><a href="https://www.instagram.com/thepumpfactory__/" target="blank"><Icon name="bxl:instagram" />/ thepumpfactory</a></li>
-            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:whatsapp" />/ thepumpfactory</a></li>
+				<li><a href="https://www.facebook.com/profile.php?id=61554502162958" target="blank"><Icon name="bxl:facebook-circle" width={50}/> <span>
+					/ thepumpfactory
+				</span>
+				</a></li>
+            	<li><a href="https://www.instagram.com/thepumpfactory__/" target="blank"><Icon name="bxl:instagram" width={50}/><span>/ thepumpfactory</span></a></li>
+            	<li><a href="https://www.instagram.com/thepumpfactoryiloilo/" target="blank"><Icon name="bxl:whatsapp" width={50}/><span>/ thepumpfactory</span></a></li>
 			</ul>
 		</div>
 	</section>
@@ -188,10 +191,9 @@ import Button from '../components/Button.astro';
 			list-style: none;
 			margin: 8px;
 			svg {
-                height: 32px;
-				padding-right: 16px;
-				margin-top: 4px;
+                height: 40px;
 				margin-bottom: -12px;
+
             }
 		}
 		a {

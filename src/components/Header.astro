@@ -1,7 +1,7 @@
 ---
 import logo from "../images/PumpFactory.webp"
 import logo2 from "../images/pumpFactory-newLogo2.svg"
-import { Image } from "astro:assets"
+import {Image}  from "astro:assets"
 import HeaderPic from "../images/headerpic.svg"
 interface Props {
     title: string
@@ -28,6 +28,7 @@ const { title, subtitle} = Astro.props
         <nav class="desktop-main-menu">
             <ul>
                 <li class=""><a href="/" class="" data-value="home">Home</a></li>
+                <li class=""><a href="/" class="" data-value="blog">Blog</a></li>
                 <li class=""><a href="/about" class="" data-value="about">About</a></li>
                 <li class=""><a href="/contact" class="" data-value="contact">Contact</a></li>
             </ul>

@@ -1,13 +1,14 @@
 @forward './mixins';
 @use './variables' as *;
 
+
 *,*::before, *::after {
     box-sizing: border-box; 
     margin: 0; 
     padding: 0;
 }
 html {
-    font-family: 'Sora variable', sans-serif;
+    font-family: 'Sora Variable', sans-serif;
     background: $txt-secondary-color;
     color: #fff;
     width: 100%;
